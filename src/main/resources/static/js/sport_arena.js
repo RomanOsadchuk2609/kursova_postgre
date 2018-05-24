@@ -86,12 +86,22 @@ app.controller("AppCtrl", function ($http, $scope) {
         var matirialArts = document.getElementById("MatirialArts").options[indexOfMatirialArts].value;
 
         var capacity=document.getElementById("Capacity").value;
+        var isValid=true;
 
-        $http.get('/api/sport_arena/insert?sportBuildingId='+sportBuildingId+'&capacity='+capacity
-            +'&gymnastic='+gymnastic+'&box='+box+'&matirialArts='+matirialArts).then(function (response){
-            window.location.reload();
-            window.alert('Спортивний манеж було успішно додано!');
-        });
+        var errorMessage='Помилка: неправильні вхідні дані!\n';
+        var regex=/^[1-9][0-9]*$/;
+        if(!regex.test(capacity)){
+            errorMessage=errorMessage+'\n-невірний формат вмістимості спортивної арени;';
+            isValid=false;
+        }
+        if(isValid) {
+            $http.get('/api/sport_arena/insert?sportBuildingId=' + sportBuildingId + '&capacity=' + capacity
+                + '&gymnastic=' + gymnastic + '&box=' + box + '&matirialArts=' + matirialArts).then(function (response) {
+                window.location.reload();
+                window.alert('Спортивний манеж було успішно додано!');
+            });
+        }
+        else window.alert(errorMessage);
 
     };
     var thisId;

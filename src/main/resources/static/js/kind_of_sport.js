@@ -22,7 +22,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var name = document.getElementById("sportName").value;
 
         var isValid=true;
-        var regex=/^([а-я]|[і])+$/ ;
+        var regex=/^[А-Яа-яІі\s]+$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат назви вида спорту;';
@@ -47,7 +47,7 @@ app.controller("AppCtrl", function ($http, $scope) {
     this.update_kind_of_sport = function upd() {
         var name = document.getElementById("sportNameUPD").value;
         var isValid=true;
-        var regex=/^([а-я]|[і])+$/ ;
+        var regex=/^[А-Яа-яІі\s]+$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат назви вида спорту;';
