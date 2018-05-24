@@ -3,7 +3,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope){
     $scope.request1_1 = [];
     var type_id=1;
-    $http.get('http://localhost:8080/api/request1_1?type_id='+type_id).then(function (response){
+    $http.get('/api/request1_1?type_id='+type_id).then(function (response){
         $scope.request1_1=response.data;
         console.log(response);
         $http.get('/api/type_of_sport_building').then(function (response){
@@ -22,7 +22,7 @@ app.controller("AppCtrl", function ($http, $scope){
     this.update_request = function add() {
         var indexOfType = document.getElementById("TypeOfSportBuilding").selectedIndex;
         type_id= document.getElementById("TypeOfSportBuilding").options[indexOfType].value;
-        $http.get('http://localhost:8080/api/request1_1?type_id='+type_id).then(function (response){
+        $http.get('/api/request1_1?type_id='+type_id).then(function (response){
             $scope.request1_1=response.data;
             console.log(response);
         });

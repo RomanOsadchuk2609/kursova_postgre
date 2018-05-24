@@ -3,7 +3,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope){
     $scope.request10 = [];
     var sport_id=1;
-    $http.get('http://localhost:8080/api/request10?sport_id='+sport_id).then(function (response){
+    $http.get('/api/request10?sport_id='+sport_id).then(function (response){
         $scope.request10=response.data;
         console.log(response);
         $http.get('/api/kind_of_sport').then(function (response){
@@ -23,7 +23,7 @@ app.controller("AppCtrl", function ($http, $scope){
     this.update_request = function add() {
         var index = document.getElementById("Sport").selectedIndex;
         sport_id= document.getElementById("Sport").options[index].value;
-        $http.get('http://localhost:8080/api/request10?sport_id='+sport_id).then(function (response){
+        $http.get('/api/request10?sport_id='+sport_id).then(function (response){
             $scope.request10=response.data;
             console.log(response);
         });

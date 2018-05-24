@@ -3,7 +3,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope) {
 
     $scope.gym = [];
-    $http.get('http://localhost:8080/api/gym').then(function (response){
+    $http.get('/api/gym').then(function (response){
         $scope.gym=response.data;
         console.log(response);
     });

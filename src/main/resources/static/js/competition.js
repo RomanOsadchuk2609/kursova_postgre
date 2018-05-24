@@ -3,7 +3,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope) {
 
     $scope.competition = [];
-    $http.get('http://localhost:8080/api/competition').then(function (response){
+    $http.get('/api/competition').then(function (response){
         $scope.competition=response.data;
         console.log(response);
     });

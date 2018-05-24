@@ -5,7 +5,7 @@ app.controller("AppCtrl", function ($http, $scope){
     var date1='2017-01-01';
     var date2='2019-01-01';
     var organizer_id=1;
-    $http.get('http://localhost:8080/api/request6_2?firstDate='+date1+'&secondDate='+date2
+    $http.get('/api/request6_2?firstDate='+date1+'&secondDate='+date2
         +'&organizer_id='+organizer_id).then(function (response){
             $scope.request6_2=response.data;
             console.log(response);
@@ -40,7 +40,7 @@ app.controller("AppCtrl", function ($http, $scope){
         }
         if (isValid){
 
-            $http.get('http://localhost:8080/api/request6_2?firstDate='+date1+'&secondDate='+date2
+            $http.get('/api/request6_2?firstDate='+date1+'&secondDate='+date2
                 +'&organizer_id='+organizer_id).then(function (response){
                 $scope.request6_2=response.data;
                 console.log(response);

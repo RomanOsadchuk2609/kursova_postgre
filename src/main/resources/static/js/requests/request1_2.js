@@ -4,7 +4,7 @@ app.controller("AppCtrl", function ($http, $scope){
     $scope.request1_2 = [];
     var type_id=1;
     var sport_id=4;
-    $http.get('http://localhost:8080/api/request1_2?type_id='+type_id+'&sport_id='+sport_id)
+    $http.get('/api/request1_2?type_id='+type_id+'&sport_id='+sport_id)
         .then(function (response){
         $scope.request1_2=response.data;
         console.log(response);
@@ -39,7 +39,7 @@ app.controller("AppCtrl", function ($http, $scope){
 
         var index = document.getElementById("Sport").selectedIndex;
         sport_id= document.getElementById("Sport").options[index].value;
-        $http.get('http://localhost:8080/api/request1_2?type_id='+type_id+'&sport_id='+sport_id).then(function (response){
+        $http.get('/api/request1_2?type_id='+type_id+'&sport_id='+sport_id).then(function (response){
             $scope.request1_2=response.data;
             console.log(response);
         });

@@ -3,7 +3,7 @@
 app.controller("AppCtrl", function ($http, $scope) {
 
     $scope.organizer = [];
-    $http.get('http://localhost:8080/api/organizer').then(function (response){
+    $http.get('/api/organizer').then(function (response){
         $scope.organizer=response.data;
         console.log(response);
     });

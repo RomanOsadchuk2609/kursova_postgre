@@ -4,7 +4,7 @@ app.controller("AppCtrl", function ($http, $scope){
     $scope.request6_1 = [];
     var date1='2017-01-01';
     var date2='2019-01-01';
-    $http.get('http://localhost:8080/api/request6_1?firstDate='+date1+'&secondDate='+date2)
+    $http.get('/api/request6_1?firstDate='+date1+'&secondDate='+date2)
         .then(function (response){
         $scope.request6_1=response.data;
         console.log(response);
@@ -24,7 +24,7 @@ app.controller("AppCtrl", function ($http, $scope){
             isValid=false;
         }
         if (isValid) {
-            $http.get('http://localhost:8080/api/request6_1?firstDate=' + date1 + '&secondDate=' + date2)
+            $http.get('/api/request6_1?firstDate=' + date1 + '&secondDate=' + date2)
                 .then(function (response) {
                     $scope.request6_1 = response.data;
                     console.log(response);

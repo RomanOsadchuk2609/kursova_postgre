@@ -5,7 +5,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope) {
 
     $scope.kind_of_sport = [];
-    $http.get('http://localhost:8080/api/kind_of_sport').then(function (response){
+    $http.get('/api/kind_of_sport').then(function (response){
         $scope.kind_of_sport=response.data;
         console.log(response);
     });

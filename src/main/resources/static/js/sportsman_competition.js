@@ -5,7 +5,7 @@ app.controller("AppCtrl", function ($http, $scope) {
     $scope.sportsman_competition = [];
     var accessTime = performance.now();
 
-    $http.get('http://localhost:8080/api/sportsman_competition').then(function (response){
+    $http.get('/api/sportsman_competition').then(function (response){
         $scope.sportsman_competition=response.data;
         console.log(response);
         accessTime=performance.now()-accessTime;

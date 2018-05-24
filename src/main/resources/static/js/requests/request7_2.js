@@ -3,7 +3,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope){
     $scope.request7 = [];
     var competition_id=1;
-    $http.get('http://localhost:8080/api/request7_2?competition_id='+competition_id)
+    $http.get('/api/request7_2?competition_id='+competition_id)
         .then(function (response){
             $scope.request7=response.data;
             console.log(response);
@@ -24,7 +24,7 @@ app.controller("AppCtrl", function ($http, $scope){
     this.update_request = function add() {
         var index = document.getElementById("Competition").selectedIndex;
         competition_id= document.getElementById("Competition").options[index].value;
-        $http.get('http://localhost:8080/api/request7_2?competition_id='+competition_id)
+        $http.get('/api/request7_2?competition_id='+competition_id)
             .then(function (response){
                 $scope.request7=response.data;
                 console.log(response);

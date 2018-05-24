@@ -3,7 +3,7 @@ var app = angular.module("kursova", [])
 app.controller("AppCtrl", function ($http, $scope) {
 
     $scope.pool = [];
-    $http.get('http://localhost:8080/api/pool').then(function (response){
+    $http.get('/api/pool').then(function (response){
         $scope.pool=response.data;
         console.log(response);
     });
