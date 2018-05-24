@@ -54,7 +54,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var gender = document.getElementById("Gender").options[indexOfGender].value;
         //var gender = document.getElementById("Gender").value;
         var isValid=true;
-        var regex=/^[А-ЯІ][а-яі]+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
+        var regex=/^[А-ЯІ][а-яі']+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат прізвища та ініціалів спорстсмена;';
@@ -130,7 +130,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var gender = document.getElementById("GenderUPD").options[indexOfGender].value;
         //var gender = document.getElementById("GenderUPD").value;
         var isValid=true;
-        var regex=/^[А-ЯІ][а-яі]+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
+        var regex=/^[А-ЯІ][а-яі']+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат прізвища та ініціалів спорстсмена;';

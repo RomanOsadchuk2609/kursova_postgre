@@ -11,13 +11,13 @@ public class SportsmanSportCoach {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public Sportsman sportsman;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public KindOfSport kindOfSport;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public SportCategory sportCategory;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public Coach coach;
 
     public SportsmanSportCoach() {

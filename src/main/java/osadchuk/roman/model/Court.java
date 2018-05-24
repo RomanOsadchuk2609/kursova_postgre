@@ -11,9 +11,9 @@ public class Court {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public SportBuilding sportBuilding;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public TypeOfCover typeOfCover;
     public double width;
     public double length;

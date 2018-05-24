@@ -22,7 +22,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var address = document.getElementById("Address").value;
 
         var isValid=true;
-        var regex=/^[А-ЯІ][а-яі]+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
+        var regex=/^[А-ЯІ][а-яі']+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(adminName)){
             errorMessage=errorMessage+'-невірний формат прізвища та ініціалів адміністратора;';
@@ -57,7 +57,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var address = document.getElementById("AddressUPD").value;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         var isValid=true;
-        var regex=/^[А-ЯІ][а-яі]+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
+        var regex=/^[А-ЯІ][а-яі']+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
         if(!regex.test(adminName)){
             errorMessage=errorMessage+'-невірний формат прізвища та ініціалів адміністратора;\n';
             isValid=false;

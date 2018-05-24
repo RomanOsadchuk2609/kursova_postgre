@@ -14,11 +14,11 @@ public class Competition {
     public int id;
     public String name;
     public Date date;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public Organizer organizer;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public SportBuilding sportBuilding;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public KindOfSport kindOfSport;
 
     public Competition() {

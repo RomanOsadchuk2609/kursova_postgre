@@ -19,7 +19,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var name = document.getElementById("typeName").value;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         var isValid=true;
-        var regex = /^[А-Яа-яІі\s]+$/;
+        var regex = /^[А-Яа-яІі'\s]+$/;
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат назви типу покриття;\n';
             isValid=false;
@@ -45,7 +45,7 @@ app.controller("AppCtrl", function ($http, $scope) {
 
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         var isValid=true;
-        var regex = /^[А-Яа-яІі\s]+$/;
+        var regex = /^[А-Яа-яІі'\s]+$/;
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат назви типу покриття;\n';
             isValid=false;

@@ -11,7 +11,7 @@ public class Pool {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public SportBuilding sportBuilding;
     public int depth;
     public int width;

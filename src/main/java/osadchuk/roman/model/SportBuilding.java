@@ -12,7 +12,7 @@ public class SportBuilding {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
     public String name;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public TypeOfSportBuilding typeOfSportBuilding;
     public String phone;
     public String address;

@@ -11,9 +11,9 @@ public class SportBuildingSport {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public SportBuilding sportBuilding;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public KindOfSport kindOfSport;
 
     public SportBuildingSport() {

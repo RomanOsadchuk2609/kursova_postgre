@@ -17,7 +17,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var name = document.getElementById("Name").value;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         var isValid=true;
-        var regex = /^[А-Яа-яІі\s]+$/
+        var regex = /^[А-Яа-яІ'і\s]+$/
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат назви спортивного розряду;';
             isValid=false;
@@ -40,7 +40,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var name = document.getElementById("NameUPD").value;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         var isValid=true;
-        var regex = /^[А-Яа-яІі\s]+$/
+        var regex = /^[А-Яа-яІ'і\s]+$/
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат назви спортивного розряду;';
             isValid=false;

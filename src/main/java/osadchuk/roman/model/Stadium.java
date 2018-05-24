@@ -11,7 +11,7 @@ public class Stadium {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.REMOVE)
     public SportBuilding sportBuilding;
     public int capacity;
     public double fieldArea;

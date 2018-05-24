@@ -35,7 +35,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         var indexOfSportClub = document.getElementById("SportClub").selectedIndex;
         var sportClubId = document.getElementById("SportClub").options[indexOfSportClub].value;
         var isValid=true;
-        var regex=/^[А-ЯІ][а-яі]+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
+        var regex=/^[А-ЯІ][а-яі']+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат прізвища та ініціалів тренера;';
@@ -85,7 +85,7 @@ app.controller("AppCtrl", function ($http, $scope) {
         //var gender = document.getElementById("GenderUPD").value;
 
         var isValid=true;
-        var regex=/^[А-ЯІ][а-яі]+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
+        var regex=/^[А-ЯІ][а-яі']+\s[А-ЯІ]\.\s?[А-ЯІ]\.$/ ;
         var errorMessage='Помилка: неправильні вхідні дані!\n';
         if(!regex.test(name)){
             errorMessage=errorMessage+'-невірний формат прізвища та ініціалів тренера;';
