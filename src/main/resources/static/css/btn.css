@@ -1,0 +1,18 @@
+.button-main {
+    background-color:#68d651;
+    border-radius:12px;
+    font-size:20px;
+    border:2px solid #20c931;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    padding:4px ;
+}
+.button-main:hover {
+    background-color:#8ced57;
+}
+.button-main:active {
+
+    position:relative;
+    top:1px;
+}
