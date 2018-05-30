@@ -12,7 +12,7 @@ public class Coach {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
     public String name;
-    @ManyToOne(cascade=CascadeType.REMOVE)
+    @ManyToOne
     SportClub sportClub;
 
     public Coach(String name) {

@@ -14,7 +14,7 @@ public class Sportsman {
     public String name;
     public int age;
     public String gender;
-    @ManyToOne(cascade=CascadeType.REMOVE)
+    @ManyToOne
     public SportClub sportClub;
 
     public Sportsman(String name, int age, String gender, SportClub sportClub) {

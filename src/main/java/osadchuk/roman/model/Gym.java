@@ -11,7 +11,7 @@ public class Gym {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int id;
-    @ManyToOne(cascade=CascadeType.REMOVE)
+    @ManyToOne
     public SportBuilding sportBuilding;
     public Boolean presenceOfCardioZone;
     public Boolean presenceOfCrossfitZone;
